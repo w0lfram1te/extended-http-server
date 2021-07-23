@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 
 import http.server
-import socketserver
 import argparse
-import os
-
-PORT = 8000
 
 class ExtendedHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, directory=None, **kwargs):
