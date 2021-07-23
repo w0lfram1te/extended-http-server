@@ -12,37 +12,15 @@ class ExtendedHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
     def do_PUT(self):
         """Serve a PUT request."""
-        print("[*] receiving PUT request")
-        # filename validation - check if file exists if yes increment
-
         path = self.translate_path(self.path)
-        f = None
-
-        print(path)     
-        # if not os.path.exists:
-            # # support for file name modification will come later
-            # print("[-] file path already exists")
-            # self.send_error(500)
-            # return
-
-        try:
-            f = open(path, 'wb')
-
-        except OSError:
-            print("[-] file opening died")
-            self.send_error(500)
-            return
-
-        try:
-            self.copyfile(self.rfile, f)
-            print("done copying")
-            self.send_response(HTTPStatus.OK)
+        length = int(self.headers["Content-Length"])
+        if False: # for future input validation
+            pass
+        else:
+            with open(path, 'wb') as fh:
+                fh.write(self.rfile.read(length))
+            self.send_response(200, "OK")
             self.end_headers()
-            f.close()
-            return
-        except:
-            f.close()
-            return
 
 if __name__ == '__main__':
     Handler = ExtendedHTTPRequestHandler
