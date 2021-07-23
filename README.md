@@ -4,6 +4,8 @@ This extends the basic functionalities of the basic Python3 `http.server` module
 
 Currently supported methods: `GET`, `HEAD`, and `PUT`.
 
+Go to `https://w0lfram1te.com/python-http-server-with-put-support` for more information and useful payloads.
+
 ## Usage
 
 ```
