@@ -20,7 +20,7 @@ optional arguments:
   -p PORT, --port PORT  listening port
 ```
 
-Quick usage: This will download the file and launch the server on port 8000 by default. 
+Quick usage: This will download the file and launch the server on port 8000 and will listen on all interfaces by default.
 
 ```bash
 wget https://raw.githubusercontent.com/w0lfram1te/extended-http-server/main/ehttpserver.py
