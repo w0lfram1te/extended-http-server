@@ -1,3 +1,3 @@
 # Extended Python Server
 
-This extends the basic functionalities of the basic Python3 web server module `http.server`.
+This extends the basic functionalities of the basic Python3 `http.server` module.
