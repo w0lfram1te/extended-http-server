@@ -6,7 +6,7 @@ Currently supported methods: `GET`, `HEAD`, and `PUT`.
 
 ## Usage
 
-```bash
+```
 usage: ehttpserver.py [-h] [-b BIND] [-p PORT] [port]
 
 Extended HTTP Server by w0lfram1te
